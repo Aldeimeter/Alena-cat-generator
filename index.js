@@ -9,6 +9,7 @@ function getPussy() {
     return;
   }
   const url = `https://api.thecatapi.com/v1/images/search?limit=1`;
+  // WARN: I know that API key shouldn't be here, for this particular api and project I simply don't care.
   const api_key =
     "live_GrNa9FbE1soLglWmkvU2USjFfP1Pjqx8E2eoCvvLW286RzSiB4ZBskU0qQ26VyKW";
   fetch(url, {
