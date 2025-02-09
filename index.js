@@ -1,4 +1,5 @@
 let counter = 0;
+let interval = null;
 function getPussy() {
   const pussyImg = document.getElementById("pussy-image");
   counter++;
@@ -24,4 +25,15 @@ function getPussy() {
 }
 
 getPussy();
-setInterval(() => getPussy(), 3000);
+if (interval === null) {
+  interval = setInterval(() => getPussy(), 3000);
+}
+window.addEventListener("click", () => {
+  if (interval === null) {
+    interval = setInterval(() => getPussy(), 3000);
+  } else {
+    alert("Cats paused");
+    clearInterval(interval);
+    interval = null;
+  }
+});
